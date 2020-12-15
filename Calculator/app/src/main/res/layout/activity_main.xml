@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonNeg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:minWidth="48dp"
-        android:text="Neg"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
-        app:layout_constraintStart_toEndOf="@+id/buttonDivide" />
-
     <EditText
         android:id="@+id/result"
         android:layout_width="wrap_content"
@@ -60,7 +49,7 @@
         android:minWidth="48dp"
         android:text="2"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        tools:layout_editor_absoluteX="157dp" />
+        app:layout_constraintStart_toStartOf="@+id/button5" />
 
     <Button
         android:id="@+id/button3"
@@ -69,8 +58,8 @@
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="3"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintStart_toStartOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <Button
         android:id="@+id/button0"
@@ -94,11 +83,10 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:minWidth="48dp"
         android:text="5"
         app:layout_constraintBaseline_toBaselineOf="@+id/button6"
-        app:layout_constraintEnd_toStartOf="@+id/button6" />
+        app:layout_constraintStart_toStartOf="@+id/button8" />
 
     <Button
         android:id="@+id/button6"
@@ -107,8 +95,8 @@
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="6"
-        app:layout_constraintTop_toBottomOf="@+id/button9"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintStart_toStartOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <Button
         android:id="@+id/button7"
@@ -137,8 +125,9 @@
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="9"
-        app:layout_constraintTop_toBottomOf="@+id/newNumber"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newNumber" />
 
     <Button
         android:id="@+id/button1"
@@ -160,14 +149,24 @@
         app:layout_constraintStart_toEndOf="@+id/button9" />
 
     <Button
-        android:id="@+id/buttonMultiply"
+        android:id="@+id/buttonNeg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
+        android:text="Neg"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@+id/buttonDivide" />
+
+    <Button
+        android:id="@+id/buttonMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
         android:text="*"
         app:layout_constraintBaseline_toBaselineOf="@+id/button6"
-        app:layout_constraintStart_toEndOf="@+id/button6" />
+        app:layout_constraintStart_toStartOf="@+id/buttonDivide" />
 
     <Button
         android:id="@+id/buttonMinus"
@@ -176,7 +175,7 @@
         android:minWidth="48dp"
         android:text="-"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonEquals"
-        tools:layout_editor_absoluteX="157dp" />
+        app:layout_constraintStart_toStartOf="@+id/button2" />
 
     <Button
         android:id="@+id/buttonDot"
@@ -185,7 +184,7 @@
         android:minWidth="48dp"
         android:text="."
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
-        tools:layout_editor_absoluteX="269dp" />
+        app:layout_constraintStart_toStartOf="@+id/buttonMultiply" />
 
     <Button
         android:id="@+id/buttonEquals"
@@ -194,8 +193,8 @@
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="="
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        tools:layout_editor_absoluteX="213dp" />
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <Button
         android:id="@+id/buttonPlus"
@@ -204,6 +203,6 @@
         android:minWidth="48dp"
         android:text="+"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonEquals"
-        tools:layout_editor_absoluteX="269dp" />
+        app:layout_constraintStart_toStartOf="@+id/buttonDot" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
