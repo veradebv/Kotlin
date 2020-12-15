@@ -1,0 +1,4 @@
+#Tue Dec 15 14:25:23 ICT 2020
+base.0=C\:\\Users\\0539\\Documents\\GitHub\\Kotlin\\Top 10 Downloader\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

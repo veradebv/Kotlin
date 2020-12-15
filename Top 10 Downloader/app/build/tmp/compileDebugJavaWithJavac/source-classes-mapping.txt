@@ -1,0 +1,2 @@
+com/example/top10downloader/BuildConfig.java
+ com.example.top10downloader.BuildConfig
