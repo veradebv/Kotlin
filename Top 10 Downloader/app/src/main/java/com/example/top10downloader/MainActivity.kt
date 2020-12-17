@@ -51,44 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             private fun  downloadXML(urlPath: String?) : String {
-                val xmlResult = StringBuilder()
-
-                try {
-                    val url = URL(urlPath)
-                    val connection: HttpURLConnection = url.openConnection() as  HttpURLConnection
-                    val response = connection.responseCode
-                    Log.d(TAG, "downloadXML: The response code was $response")
-
-//            val inputStream = connection.inputStream
-//            val inputStreamReader = InputStreamReader(inputStream)
-//            val reader = BufferedReader(inputStreamReader)
-
-                    val reader = BufferedReader(InputStreamReader(connection.inputStream))
-
-                    val inputBuffer = CharArray(500)
-                    var charsRead = 0
-                    while (charsRead >= 0) {
-                        charsRead = reader.read(inputBuffer)
-                        if (charsRead > 0){
-                            xmlResult.append(String(inputBuffer, 0, charsRead))
-                        }
-                    }
-                    reader.close()
-
-                    Log.d(TAG, "Received ${xmlResult.length} bytes")
-                    return xmlResult.toString()
-
-                } catch (e: MalformedURLException) {
-                    Log.e(TAG, "downloadXML: Invalid URL ${e.message}")
-                } catch (e: IOException) {
-                    Log.e(TAG, "downloadXML: IO Exception reading data: ${e.message}")
-                } catch (e: SecurityException){
-                    Log.e(TAG, "downloadXML: Security exception. Needs permission? ${e.message}")
-                } catch (e: Exception) {
-                    Log.e(TAG, "Unknown error: ${e.message}", )
-                }
-
-                return  " " // if it gets to here, there's been a proble. Retun empty string
+                return URL(urlPath).readText()
             }
         }
 
